@@ -1,0 +1,254 @@
+/* Palette Couleurs à partir de l'img background ::after#72a0d1	rgb(114, 160, 209)
+#d0e0f3	rgb(208, 224, 243)
+#073668	rgb(7, 54, 104)
+#195c96	rgb(25, 92, 150)
+#3b4c64	rgb(59, 76, 100)
+*/
+/* Voir #DA1F5A => beau ROSE ROUGE */
+
+/* // On initialise les variables couleurs - les 2 derniers caractères sont l'opacité */
+:root {
+  --textDark: #3b4c64c4;
+  --textLight: white;
+  --darkBlue: #073668;
+  --mediumBlue: #195C96c4;
+  --lightBlue: #72a0d1c4;
+  --mediumCyan: #81F7E5c4;
+  --darkCyan: #79C99Ec4;
+  --pink: #ffc0cbc4;
+  --purplePink: #eac8ccc4;
+  --border: #bbbbbbc4;
+  --shadow: #0e1119c4;
+
+  --selected: var(--purplePink);
+  --hover: var(--pink)
+
+  /* --dark: #3b4c64
+  --background-start-rgb: 208, 224, 243;
+  --background-end-rgb: 114, 160, 209;
+  --foreground-rgb: 59, 76, 100; */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: 'comic sans ms', sans-serif; 
+  /* font-family: 'tahoma', sans-serif; */
+  max-width: 100vw;
+  overflow-x: hidden;  
+  color : var(--textLight);
+  background-color: var(--mediumBlue);
+}
+
+body {
+  /* color: rgb(var(--foreground-rgb)); */
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.app:before {
+  content: '';
+  background: url('./asset/background.jpg') no-repeat center center/cover ;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {     /* A VOIR !!!!!!! */
+  html {
+    color-scheme: dark;
+  }
+}
+
+.App-content {
+  /* background-color: #1d079c; */
+  min-height: 50vh;
+  /* display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center; */
+  font-size: calc(10px + 1vmin);
+}
+
+.component-search-input input {
+  border-radius: 4px;
+  border: 1px solid --border;
+  box-sizing: border-box;
+  font-size: 18px;
+  padding: 10px 8px;
+  width: 400px;
+}
+
+/* TABLEAU */
+.TableContainer {
+  text-align: left;
+  overflow: hidden;
+  width: 80%;
+  display: table;
+  margin: 5% 10% 5% 10%;
+}
+
+.TableContainer table {
+  width: 100%;
+}
+
+.TableContainer thead {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.TableContainer td {
+  font-size: 1em;
+}
+
+.TableContainer td,
+.TableContainer th {
+  padding-bottom: 1%;
+  padding-top: 1%;
+  padding-left: 2%;
+}
+
+/* Background-color of the odd rows */
+.TableContainer tbody tr:nth-child(odd) {
+  background-color: var(--lightBlue)	;
+}
+
+/* Background-color of the even rows */
+.TableContainer tbody tr:nth-child(even) {
+  background-color: var(--mediumBlue)	;
+}
+
+.TableContainer th {
+  background-color: var(--darkBlue);
+}
+
+/* .TableContainer td:first-child {
+  color: #ffffffa1;
+} */
+
+.TableContainer thead tr th:nth-child(odd) {
+  color: var(--lightBlue);
+}
+.TableContainer thead tr th:nth-child(2),
+.TableContainer thead tr th:nth-child(3) {
+  /* min-width: 250px; */
+ }
+
+.TableContainer tr:hover {
+  /* background-color: #073668	; */
+  box-shadow: 0 6px 6px -6px --shadow;
+}
+
+.TableContainer td:hover {
+  background-color: var(--darkBlue)	;
+  /* color: #403e10; */
+}
+
+@media (max-width: 600px) {
+  .TableContainer td:nth-child(2),
+  .TableContainer th:nth-child(2),
+  .TableContainer td:nth-child(3),
+  .TableContainer th:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .TableContainer td:nth-child(3),
+  .TableContainer th:nth-child(3) {
+    display: none;
+  }
+}
+
+.selectedline td {
+  background-color: var(--selected);
+  color: var(--textDark);
+  font-weight: bold;
+  box-shadow: 0 6px 6px -6px #0e1119;
+  /* #EA7AF4 */
+}
+
+.selectedline td:hover {
+  background-color: var(--hover);
+}
+
+.th-category {
+  color: rgb(242, 49, 165);
+  font-style: italic;
+}
+
+
+
+/* FORMULAIRE */
+.Form {
+  background-color: #195c9697; 
+  border-radius: 5px;
+  text-align: left;
+  margin: 5% 10% 5% 10%;
+  padding: 10px 10px 10px 10px;
+  /* border: #12688a solid 1px; */
+}
+
+.Form input {
+  background-color: var(--selected);  
+  font-family: 'comic sans ms', sans-serif;     /* on l'a déjà mis dans BOBY, HTML mais le prend pas en compte ici !!! */
+  color: var(--textDark);
+  font-size: 18px;
+  width: 100%;
+  margin-bottom: 10px;
+  padding-left: 10px;
+
+}
+.Form input:focus {
+  background-color: var(--hover);
+}
+
+.Form select {
+  font-size: 18px;
+  width: 100%;
+}
+
+.Form legend {
+  text-align: center; 
+}
+
+.Form label {
+  text-align: left;
+  width: 40%;
+}
+
+.Action input {
+  background-color: var(--selected);
+  color: var(--textDark);
+  /* text-shadow: 1px 1px 2px black; */
+  font-size: 18px;
+  /* width: 100%; */
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+  /* border: none; */
+  cursor: pointer;
+}
+.Action input:hover {
+  background-color: var(--hover);
+}
+
+
