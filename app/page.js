@@ -15,9 +15,9 @@ export default function Home() {
     <div>
       <Link href={"/testApiBook"}>TestAPI Book</Link>
     </div>
-    {/* <div>
+    <div>
       <Link href={"/testMovieApi"}>TestAPI Movies</Link>
-    </div> */}
+    </div>
     {/* <div>
       <Link href={"/forme"}>Forme !!!</Link>
     </div> */}

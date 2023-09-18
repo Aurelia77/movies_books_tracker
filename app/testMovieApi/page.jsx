@@ -90,7 +90,7 @@ export default function testApiMovie() {
     }
 
     return (
-        <div>
+        <div>Coucou
             {/* <form onSubmit={handleSubmit}>
                 <label> Recherche de film :
                     <input onChange={handleChangeMovie} value={searchMovie} type="text" name="emailInput" />
