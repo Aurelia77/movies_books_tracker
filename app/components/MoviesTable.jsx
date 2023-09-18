@@ -3,9 +3,7 @@ import React from 'react'
 // Composant
 import Row from './Row.jsx'
 
-export default function MoviesTable({ moviesList = [{
-                                                id: 0, name: "xxx", category: "xxx", year: 0, }], 
-                                    selectedMovieId, setSelectedMovie, orderedBy }) {
+export default function MoviesTable({ moviesList, selectedMovieId, setSelectedMovie, orderedBy }) {
 
     console.log("orderedBy", orderedBy)
 

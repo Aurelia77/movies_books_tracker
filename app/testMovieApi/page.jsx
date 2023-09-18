@@ -110,7 +110,7 @@ export default function testApiMovie() {
             } */}
 
             {/* <MovieEditForm handleAddMovie={handleAddMovie} /> */}
-            <MoviesTable allMovies={allMovies} />
+            {/* <MoviesTable allMovies={allMovies} /> */}
 
 
 
