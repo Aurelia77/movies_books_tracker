@@ -172,6 +172,7 @@ export default function MovieEditForm({selectedMovie, onAddMovie, onSuppMovie, o
                         <label htmlFor="movieCategory">Catégorie :</label>
                         <select disabled={!state.actifInput} name="" id="movieCategory" value={state.editingMovie?.category} onChange={onChangeMovieCat}>
                             <option value="Action">Action</option>
+                            <option value="Aventure">Aventure</option>
                             <option value="Comédie">Comédie</option>
                             <option value="Drame">Drame</option>
                             <option value="Fantastique">Fantastique</option>
