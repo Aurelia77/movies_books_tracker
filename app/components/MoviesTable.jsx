@@ -4,7 +4,7 @@ import React from 'react'
 import Row from './Row.jsx'
 
 export default function MoviesTable({ moviesList = [{
-                                                id: 0, name: "", category: "", year: 0, }], 
+                                                id: 0, name: "xxx", category: "xxx", year: 0, }], 
                                     selectedMovieId, setSelectedMovie, orderedBy }) {
 
     console.log("orderedBy", orderedBy)

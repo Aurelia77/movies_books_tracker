@@ -137,7 +137,7 @@ export default function MovieTrackerApp() {
             <input type="button" onClick={sortByName} value="Trier par nom" />
             <SearchForm onSearchChange={onSearchChange} />
             <MovieEditForm selectedMovie={selectedMovie} onAddMovie={handleAddMovie} onSuppMovie={handleDeleteMovie} onUpdateMovie={handleUpdateMovie} /> 
-            <MoviesTable moviesList={moviesList} selectedMovieId={selectedMovie.id} setSelectedMovie={setSelectedMovie} orderedBy={orderedBy} />
+            {/* <MoviesTable moviesList={moviesList} selectedMovieId={selectedMovie.id} setSelectedMovie={setSelectedMovie} orderedBy={orderedBy} /> */}
         </div>
     )
 }
